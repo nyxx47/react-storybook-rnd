@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="629" height="477" viewBox="0 0 629 477">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#917878"/>
+      <stop offset="1" stop-color="#483c3c"/>
+    </linearGradient>
+    <filter id="rectangle-2" x="183" y="0" width="446" height="301" filterUnits="userSpaceOnUse">
+      <feOffset dx="15" dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#242aac" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_6" data-name="Group 6" transform="translate(-290 -374)">
+    <g id="Group_3" data-name="Group 3" transform="translate(-63 -26)">
+      <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(504 578)" fill="none" stroke="#9d9d9d" stroke-width="1">
+        <circle cx="74" cy="74" r="74" stroke="none"/>
+        <circle cx="74" cy="74" r="73.5" fill="none"/>
+      </g>
+      <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(437 511)" fill="none" stroke="#9d9d9d" stroke-width="1">
+        <circle cx="141" cy="141" r="141" stroke="none"/>
+        <circle cx="141" cy="141" r="140.5" fill="none"/>
+      </g>
+      <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(353 427)" fill="none" stroke="#9d9d9d" stroke-width="1">
+        <circle cx="225" cy="225" r="225" stroke="none"/>
+        <circle cx="225" cy="225" r="224.5" fill="none"/>
+      </g>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="9" cy="9" r="9" transform="translate(499 625)" fill="url(#linear-gradient)"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="12.5" cy="12.5" r="12.5" transform="translate(719 803)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_5" data-name="Group 5">
+      <g id="Group_2" data-name="Group 2" transform="translate(519.472 434.186)">
+        <rect id="rectangle-2-2" data-name="rectangle-2" width="375" height="235" rx="13" transform="translate(-0.472 -0.186)" fill="#403e3e" opacity="0.4"/>
+        <rect id="Rectangle_2" data-name="Rectangle 2" width="244" height="66" transform="translate(130.528 41.814)" opacity="0.343"/>
+      </g>
+      <g id="Group_1" data-name="Group 1" transform="translate(488.432 388.735)">
+        <g transform="matrix(1, 0, 0, 1, -198.43, -14.74)" filter="url(#rectangle-2)">
+          <rect id="rectangle-2-3" data-name="rectangle-2" width="386" height="241" rx="13" transform="translate(198 15)" fill="#403e3e"/>
+        </g>
+        <g id="group-4" transform="translate(243.883 184.575)" opacity="0.404">
+          <text id="_1234_5678_9" data-name="1234   5678   9" transform="translate(13 9)" fill="#fff" font-size="9" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300" opacity="0.485"><tspan x="-12.987" y="0">VALID</tspan></text>
+          <text id="_1234_5678_9-2" data-name="1234   5678   9" transform="translate(13.109 18.977)" fill="#fff" font-size="9" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300" opacity="0.485"><tspan x="-11.925" y="0">THRU</tspan></text>
+        </g>
+        <g id="group-18" transform="translate(146.33 117.507)">
+          <ellipse id="ellipse-4" cx="3" cy="3.5" rx="3" ry="3.5" transform="translate(0.238 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-2" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(14.238 -0.243)" fill="#fff"/>
+        </g>
+        <g id="group-18-2" data-name="group-18" transform="translate(200.65 117.507)" opacity="0.505">
+          <circle id="ellipse-4-3" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(-0.082 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-4" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(13.918 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-5" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(28.918 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-6" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(42.918 -0.243)" fill="#fff"/>
+        </g>
+        <g id="group-18-3" data-name="group-18" transform="translate(281.574 117.507)" opacity="0.505">
+          <circle id="ellipse-4-7" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(-0.007 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-8" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(13.993 -0.243)" fill="#fff"/>
+          <ellipse id="ellipse-4-9" data-name="ellipse-4" cx="3" cy="3.5" rx="3" ry="3.5" transform="translate(28.993 -0.243)" fill="#fff"/>
+          <circle id="ellipse-4-10" data-name="ellipse-4" cx="3.5" cy="3.5" r="3.5" transform="translate(42.993 -0.243)" fill="#fff"/>
+        </g>
+        <g id="group-18-4" data-name="group-18" transform="translate(281.574 191.781)" opacity="0.505">
+          <ellipse id="ellipse-4-11" data-name="ellipse-4" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(-0.007 0.484)" fill="#fff"/>
+          <ellipse id="ellipse-4-12" data-name="ellipse-4" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(13.993 0.484)" fill="#fff"/>
+          <circle id="ellipse-4-13" data-name="ellipse-4" cx="3" cy="3" r="3" transform="translate(28.993 0.484)" fill="#fff"/>
+          <ellipse id="ellipse-4-14" data-name="ellipse-4" cx="3.5" cy="3" rx="3.5" ry="3" transform="translate(42.993 0.484)" fill="#fff"/>
+        </g>
+        <rect id="rectangle-16" width="51" height="7" rx="3.5" transform="translate(279.568 35.265)" fill="#a09f9f" opacity="0.306"/>
+        <rect id="rectangle-16-2" data-name="rectangle-16" width="51" height="6" rx="3" transform="translate(36.568 192.265)" fill="#fff" opacity="0.505"/>
+        <rect id="rectangle-16-3" data-name="rectangle-16" width="51" height="6" rx="3" transform="translate(103.568 192.265)" fill="#fff" opacity="0.505"/>
+        <text id="_13.74" data-name="$13.74" transform="translate(110.568 128.265)" fill="#fff" font-size="24" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300"><tspan x="0" y="0">xx</tspan></text>
+        <text id="_13.74-2" data-name="$13.74" transform="translate(29.568 128.265)" fill="#fff" font-size="24" font-family="AvenirNext-DemiBold, Avenir Next" font-weight="300"><tspan x="0" y="0">xxxx</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
