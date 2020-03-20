@@ -14,7 +14,8 @@ const Icons = {
 const Button = ({
     children, 
     href, 
-    onClick, 
+    onClick,
+    isFocus, 
     variant, 
     rounded, 
     border, 
@@ -33,6 +34,7 @@ const Button = ({
             <StyledButton 
             onClick={onClick} 
             variant={variant} 
+            isFocus={isFocus}
             rounded={rounded} 
             width={width} 
             height={height} 

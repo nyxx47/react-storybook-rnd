@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {ping} from '../store/modules/ping'
 import Cards from '../assets/images/cards.svg'
 
 import Container from '../components/containers'
@@ -36,20 +35,14 @@ class App extends Component{
                > 
                   <View width="50%" overflow="hidden" isEqualWidth="100%" isEqualHeight="20vh" backgroundColor="#001CF9" position="relative">
                      <Image width="100%" src={Cards} position="absolute" isEqualtop="10px" isEqualleft="-40px" left="-50px" top="100px" />
-                     {/* <Button onClick={() => this.props.open()}>OPEN</Button> */}
                   </View>
-                  <View width="50%" isEqualWidth="100%" direction="column" >
+                  <View width="50%" isEqualWidth="100%" flexValue="1" direction="column" >
                      { this.props.isStatus 
                       ? <Main/>
                       : <Options/>   
                      }
                   </View>
             </View>
-
-            {/* <h1>is pinging: {this.props.isPinging.toString()}</h1>
-            <Button onClick={() => this.props.ping()} variant="primary">
-            Start PING
-            </Button> */}
          </Container>
       );
    }
@@ -61,7 +54,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => {
    return {
-      ping: () => dispatch(ping()),
       open: () => dispatch(open())
    }
 }

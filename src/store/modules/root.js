@@ -2,12 +2,13 @@ import { combineEpics } from 'redux-observable'
 import { combineReducers } from 'redux'
 import {pingEpic, pingReducer} from './ping'
 import {fetchUserEpic,users, isFetchingUser} from './cancellation'
-import {paymentEpic, payments} from './paymentConfirmation'
+import {switchUIEpic,paymentOptions, payments} from './paymentConfirmation'
 
 export const rootEpic = combineEpics(
     pingEpic,
     fetchUserEpic,
-    paymentEpic
+    switchUIEpic,
+    paymentOptions
 )
 
 export const rootReducer = combineReducers({

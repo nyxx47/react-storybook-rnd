@@ -27,7 +27,7 @@ const isHover = props => {
       color = "#F7FBFF"
       break;
     case "secondary":
-      color = "#F7FBFF"
+      color = "#001CF9"
       break;
     default:
       color = "#001CF9"
@@ -91,7 +91,7 @@ export const StyledButton = styled.button`
     cursor: ${props => isCursor(props)};
     pointer-events: ${props => isPointer(props)};
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.8s ease;
     white-space: nowrap;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -101,7 +101,12 @@ export const StyledButton = styled.button`
     text-align: center;
     color: ${props => isColor(props)};
     &:hover{
-        background: ${props => isHover(props)};
+        background: ${props => !props.isFocus ? isHover(props) : 'none'};
+        color: ${props => !props.isFocus ? '#ffffff' : '#001CF9'};
+       
+    box-shadow: 5px 10px 15px rgba(0, 28, 249, 0.25);
+
+
       }
     &:focus{
       outline: none;

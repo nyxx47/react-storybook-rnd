@@ -27,6 +27,7 @@ class Main extends React.Component{
              </View>
              <View width="100%" padding="20px">
                  <Button
+                 isFocus
                  onClick={() => this.props.open()}
                  icon="arrowForward" 
                  variant="secondary" 
@@ -35,11 +36,11 @@ class Main extends React.Component{
                  border="primary"
                  iconPosition="absolute"
                  iconRight="10px">
-                 Pilih Metode Pembayaran
+                 { !this.props.isChecked ? 'Pilih Metode Pembayaran' : this.props.isChecked.name}
                  </Button>
              </View>
              <View width="100%" padding="20px" justify="space-between">
-                 <Button width="45%" height="40px" variant="secondary" border="primary">
+                 <Button isFocus width="45%" height="40px" variant="secondary" border="primary">
                      Kembali
                  </Button>
                  <Button width="45%" height="40px" border="primary">
@@ -54,10 +55,14 @@ class Main extends React.Component{
     }
 }
 
+const mapStateToProps = state => ({
+    isChecked: state.payments.isChecked
+})
+
 const mapDispatchToProps = dispatch => {
     return {
        open: () => dispatch(open())
     }
  }
 
-export default connect(null,mapDispatchToProps)(Main)
+export default connect(mapStateToProps,mapDispatchToProps)(Main)

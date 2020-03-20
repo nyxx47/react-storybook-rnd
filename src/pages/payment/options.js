@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {close} from '../../store/modules/paymentConfirmation'
+import {close, isChecked} from '../../store/modules/paymentConfirmation'
 
 import Flatlist from '../../components/flatlists'
 import Button from '../../components/buttons'
 import View from '../../components/views'
-import Image from '../../components/images'
+import Text from '../../components/texts'
 import {Backpress} from '../../assets/icons'
 
 class Options extends React.Component{
@@ -20,20 +20,44 @@ class Options extends React.Component{
                     height="2.5em"/>
              </View>
              <View margin="20px 0px 20px 0px">
-                 <Flatlist title="Total Amount" subtitle="Rp. 50.000,00"/>
+                 <Flatlist title="Pilin Metode Pembayaran Anda"/>
              </View>
-             <View width="100%" padding="20px">
-                 <Button 
-                 icon="arrowForward" 
-                 variant="secondary" 
-                 width="100%" 
-                 height="50px" 
-                 border="primary"
-                 iconPosition="absolute"
-                 iconRight="10px">
-                 Pilih Metode Pembayaran
-                 </Button>
+             <View flexValue="1" direction="column">
+                <View width="100%" padding="5px 20px 5px 20px" justify="space-between">
+                    <Button onClick={() => this.props.isChecked({
+                        id: "01",
+                        name: "QR Payment",
+                    })} variant="secondary" width="45%" height="50px" border="primary">
+                    QR Payment
+                    </Button>
+                    <Button onClick={() => this.props.isChecked({
+                        id: "02",
+                        name: "Debit/Credit",
+                    })}variant="secondary" width="45%" height="50px" border="primary">
+                    Debit/Credit
+                    </Button>
+                </View>
+                <View width="100%" padding="5px 20px 5px 20px" justify="space-between">
+                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    Payment Point
+                    </Button>
+                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    Pede
+                    </Button>
+                </View>
+                <View width="100%" padding="5px 20px 5px 20px" justify="space-between">
+                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    JakOne
+                    </Button>
+                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    YAP!
+                    </Button>
+                </View>
              </View>
+             <View padding="20px">
+                 <Text>28/02/2020 - 18:30:20</Text>
+             </View>
+             
             </>
          )
     }
@@ -41,7 +65,8 @@ class Options extends React.Component{
 
 const mapDispatchToProps = dispatch => {
     return {
-       close: () => dispatch(close())
+       close: () => dispatch(close()),
+       isChecked: payload => dispatch(isChecked(payload))
     }
  }
 
