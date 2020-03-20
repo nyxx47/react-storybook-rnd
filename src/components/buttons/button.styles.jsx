@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../particles/'
 
 const isBackgroundColor = props => {
   if(!props.variant) return "#001CF9"
@@ -114,7 +115,12 @@ export const StyledButton = styled.button`
 
     &:active {
       outline: none;
-  }
+    }
+
+    @media ${breakpoints.mobileL} {
+        width: ${props => props.isEqualWidth} !important;
+        height: ${props => props.isEqualHeight} !important;
+    }
 `
 
 export const StyledLinkButton = styled(StyledButton).attrs({

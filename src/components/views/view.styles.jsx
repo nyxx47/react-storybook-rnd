@@ -33,6 +33,7 @@ export const StyledView = styled.div`
     flex-direction: ${props => props.direction};
     flex: ${props => props.flexValue ? '1': 'none'};
     justify-content: ${props => props.justify};
+    align-items: ${props => !props.align ? 'none' : props.align};
     width: ${props => props.width};
     height: ${props => props.height};
     background-color: ${props => props.backgroundColor};

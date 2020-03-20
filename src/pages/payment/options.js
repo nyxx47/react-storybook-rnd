@@ -33,20 +33,29 @@ class Options extends React.Component{
                     <Button onClick={() => this.props.isChecked({
                         id: "02",
                         name: "Debit/Credit",
-                    })}variant="secondary" width="45%" height="50px" border="primary">
+                    })} variant="secondary" width="45%" height="50px" border="primary">
                     Debit/Credit
                     </Button>
                 </View>
                 <View width="100%" padding="5px 20px 5px 20px" justify="space-between">
-                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    <Button onClick={() => this.props.isChecked({
+                        id: "03",
+                        name: "Payment Point",
+                    })} variant="secondary" width="45%" height="50px" border="primary">
                     Payment Point
                     </Button>
-                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    <Button onClick={() => this.props.isChecked({
+                        id: "04",
+                        name: "Pede",
+                    })} variant="secondary" width="45%" height="50px" border="primary">
                     Pede
                     </Button>
                 </View>
                 <View width="100%" padding="5px 20px 5px 20px" justify="space-between">
-                    <Button variant="secondary" width="45%" height="50px" border="primary">
+                    <Button onClick={() => this.props.isChecked({
+                        id: "05",
+                        name: "JakOne",
+                    })} variant="secondary" width="45%" height="50px" border="primary">
                     JakOne
                     </Button>
                     <Button variant="secondary" width="45%" height="50px" border="primary">

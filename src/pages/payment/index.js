@@ -1,68 +1,63 @@
-import React from 'react'
+import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {open} from '../../store/modules/paymentConfirmation'
-import Logo from '../../assets/images/logo.png'
+import Cards from '../../assets/images/cards.svg'
 
-import Flatlist from '../../components/flatlists'
-import Button from '../../components/buttons'
+import Container from '../../components/containers'
 import View from '../../components/views'
 import Image from '../../components/images'
-import Text from '../../components/texts'
 
-class Main extends React.Component{
+import Master from './master.js'
+import Options from './options.js'
 
-    render(){
-        return (
-            <>
-             <View>
-                 <Image src={Logo} width="40px"  margin="15px"/>
-             </View>
-             <View direction="column" isEqualWidth="100%">
-                 <Flatlist title="Nama Merchant" subtitle="Elevenia"/>
-                 <Flatlist title="Order No" subtitle="100234050"/>
-                 <Flatlist title="Tanggal Transaksi" subtitle="28/02/2020"/>
-             </View>
-             <View margin="20px 0px 20px 0px">
-                 <Flatlist title="Total Amount" subtitle="Rp. 50.000,00"/>
-             </View>
-             <View width="100%" padding="20px">
-                 <Button
-                 isFocus
-                 onClick={() => this.props.open()}
-                 icon="arrowForward" 
-                 variant="secondary" 
-                 width="100%" 
-                 height="50px" 
-                 border="primary"
-                 iconPosition="absolute"
-                 iconRight="10px">
-                 { !this.props.isChecked ? 'Pilih Metode Pembayaran' : this.props.isChecked.name}
-                 </Button>
-             </View>
-             <View width="100%" padding="20px" justify="space-between">
-                 <Button isFocus width="45%" height="40px" variant="secondary" border="primary">
-                     Kembali
-                 </Button>
-                 <Button width="45%" height="40px" border="primary">
-                      Lanjutkan
-                 </Button>
-             </View>
-             <View width="100%" padding="20px">
-                 <Text size="14" weight="regular">28/02/2020 - 18:30:20</Text>
-             </View>
-            </>
-         )
-    }
+
+class App extends Component{
+   render(){
+      return(
+         <Container 
+         isEqualWidth="100%" 
+         isEqualHeight="100vh" 
+         display="flex" 
+         flexDirection="column"
+         justifyContent="center"
+         alignItems="center"
+         >
+            <View 
+               width="50%"
+               isEqualWidth="90%"
+               isEqualHeight="90vh"
+               height="60vh" 
+               backgroundColor="#ffffff" 
+               isBoxShadow="10px 20px 50px rgba(149, 163, 180, 0.1)"
+               radius="20px"
+               overflow="hidden"
+               isEqualDirection="column"
+               
+               > 
+                  <View width="50%" overflow="hidden" isEqualWidth="100%" isEqualHeight="20vh" backgroundColor="#001CF9" position="relative">
+                     <Image width="100%" src={Cards} position="absolute" isEqualtop="10px" isEqualleft="-40px" left="-50px" top="100px" />
+                  </View>
+                  <View width="50%" isEqualWidth="100%" flexValue="1" direction="column" >
+                     { this.props.isStatus 
+                      ? <Master/>
+                      : <Options/>   
+                     }
+                  </View>
+            </View>
+         </Container>
+      );
+   }
 }
 
 const mapStateToProps = state => ({
-    isChecked: state.payments.isChecked
+      isStatus: state.payments.isStatus
 })
 
 const mapDispatchToProps = dispatch => {
-    return {
-       open: () => dispatch(open())
-    }
- }
+   return {
+      open: () => dispatch(open())
+   }
+}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Main)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

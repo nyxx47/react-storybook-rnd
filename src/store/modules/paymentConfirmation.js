@@ -18,7 +18,7 @@ export const switchUIEpic = action$ => action$.pipe(
     ofType(CLOSE_OPTIONS),
 )
 
-export const paymentOptions = action$ => action$.pipe(
+export const paymentOptionsEpic = action$ => action$.pipe(
     ofType('IS_CHECKED'),
     map(option => ({ type: 'CLOSE_OPTIONS', payload: option }))
 )

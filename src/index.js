@@ -5,17 +5,17 @@ import { Provider } from "react-redux";
 import configureStore from './store/configureStore'
 
 
-import App from './pages/App';
+import App from './pages/payment';
+import Success from './pages/success'
 import Users from './pages/users'
 
 let store = configureStore()
-
-console.log("STATE :: ",store.getState())
 
 ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Route path="/" component={App} exact />
+            <Route path="/success" component={Success} />
             <Route path="/users" component={Users} />
         </Router>
     </Provider>,

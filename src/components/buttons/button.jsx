@@ -28,6 +28,8 @@ const Button = ({
     iconRight,
     iconLeft,
     iconBottom,
+    isEqualWidth,
+    isEqualHeight,
     ...props}) => {
     if(!href)
         return (
@@ -39,6 +41,8 @@ const Button = ({
             width={width} 
             height={height} 
             border={border}
+            isEqualWidth={isEqualWidth}
+            isEqualHeight={isEqualHeight}
             {...props}>
                 {children}
                 <ButtonIcon name={icon} iconPosition={iconPosition} iconRight={iconRight}/>

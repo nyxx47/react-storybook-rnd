@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../particles/'
 
 const color = props => {
     if(!props.variant) return "#403e3e"
@@ -46,8 +47,13 @@ const StyledText = styled.p`
     font-family: "Helvetica Neue";
     font-weight: ${props => weight(props)};
     font-size: ${props => size(props)}px;
-    text-align: left;
+    text-align: ${props => !props.align ? 'left' : props.align};
     color: ${props => color(props)};
+
+    @media ${breakpoints.mobileL} {
+        font-size: ${props => props.isEqualSize}px !important;
+        text-align: ${props => props.isEqualAlign}px !important;
+    }
 `
 
 export default StyledText
