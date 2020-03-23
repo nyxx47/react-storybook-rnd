@@ -47,7 +47,7 @@ export const StyledContainer = styled.div`
     display: ${props => isDisplayProps(props)};
     width: ${props => props.isEqualWidth};
     height: ${props => props.isEqualHeight};
-    background: linear-gradient(#e1e7ed 0%, #e1f0f5 100%);
+    background: ${props => !props.backgroundColor ? 'linear-gradient(#e1e7ed 0%, #e1f0f5 100%)' : props.backgroundColor};
     flex-direction: ${props => flexDirection(props)};
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};

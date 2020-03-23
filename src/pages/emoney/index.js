@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import {useSelector} from 'react-redux'
+import React from 'react';
 import Cards from '../../assets/images/cards.svg'
 
 import { Container, View, Image } from "../../components";
-
 import Master from './master.js'
+import { useTitle } from 'hookrouter';
 
 
 const Emoney =  () => {
-   const isStatus = useSelector( state => state.payments.isStatus)
+   useTitle("Emoney")
 
    return(
       <Container 

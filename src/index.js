@@ -1,27 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { useRoutes } from 'hookrouter';
 import { Provider } from "react-redux";
 import configureStore from './store/configureStore'
+import routes from './pages/routes.js'
+import NotFound from './pages/404'
 
-
-import App from './pages/payment';
-import Success from './pages/success';
-import Error from './pages/error';
-import Users from './pages/users'
-import Emoney from './pages/emoney';
 
 let store = configureStore()
 
+const App = () => {
+    const route = useRoutes(routes)
+    return route || <NotFound/>
+}
+
 ReactDOM.render(
     <Provider store={store}>
-        <Router>
-            <Route path="/" component={App} exact />
-            <Route path="/emoney" component={Emoney} />
-            <Route path="/success" component={Success} />
-            <Route path="/error" component={Error} />
-            <Route path="/users" component={Users} />
-        </Router>
+        <App/>
     </Provider>,
 document.getElementById('app'));
 

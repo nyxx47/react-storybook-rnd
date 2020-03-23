@@ -1,25 +1,33 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/images/logo.png'
 
-import { Button, View, Image, Text, InputLabel } from "../../components";
+import { Button, View, Image, InputLabel } from "../../components";
 
 const Master = () => {
     const [user, setUser] = useState('');
     const [promo, setPromo] = useState('');
+
+    const handlerUserID = e => {
+        setUser(e.target.value)
+    }
+
+    const handlerPromoCode = e => {
+        setPromo(e.target.value)
+    }
     
     return (
         <>
             <View>
                 <Image src={Logo} width="40px"  margin="15px"/>
             </View>
-            <View direction="column" padding="20px"  isEqualWidth="100%">
+            <View direction="column" flexValue="1" padding="20px"  isEqualWidth="100%">
                 <InputLabel 
                 title="User ID" 
                 type="text" 
                 value={user} 
                 width="100%" 
                 bottom="20px"
-                onChange={ (e) => setUser(e.target.value)}
+                onChange={ handlerUserID }
                 />
                 <InputLabel 
                 title="Promo Code" 
@@ -27,7 +35,7 @@ const Master = () => {
                 width="100%" 
                 bottom="20px"
                 value={promo} 
-                onChange={ e => setPromo(e.target.value)}
+                onChange={ handlerPromoCode }
                 />
             </View>
             <View width="100%" padding="20px" justify="space-between">

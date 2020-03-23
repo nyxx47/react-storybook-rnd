@@ -4,6 +4,7 @@ import {open} from '../../store/modules/payments/actions'
 import Logo from '../../assets/images/logo.png'
 
 import { Flatlist, Button, View, Image, Text } from "../../components";
+import { navigate } from 'hookrouter';
 
 const Master = () => {
     const isChecked = useSelector(state => state.payments.isChecked)
@@ -40,7 +41,9 @@ const Master = () => {
                 <Button isFocus width="45%" height="40px" variant="secondary" border="primary">
                     Kembali
                 </Button>
-                <Button width="45%" height="40px" border="primary">
+                <Button width="45%" height="40px" border="primary"
+                onClick={ () => navigate("/emoney")}
+                >
                     Lanjutkan
                 </Button>
             </View>
