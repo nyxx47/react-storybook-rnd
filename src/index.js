@@ -6,7 +6,8 @@ import configureStore from './store/configureStore'
 
 
 import App from './pages/payment';
-import Success from './pages/success'
+import Success from './pages/success';
+import Error from './pages/error';
 import Users from './pages/users'
 
 let store = configureStore()
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Router>
             <Route path="/" component={App} exact />
             <Route path="/success" component={Success} />
+            <Route path="/error" component={Error} />
             <Route path="/users" component={Users} />
         </Router>
     </Provider>,
