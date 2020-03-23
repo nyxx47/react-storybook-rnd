@@ -1,8 +1,8 @@
 import React from 'react'
-import View from '../views'
+import View from '../../atoms/views'
 
 import StyledFlatlist from './flatlist.styles.jsx'
-import Text from '../texts'
+import Text from '../../atoms/texts'
 
 const Flatlist = ({title, subtitle}) => {
 

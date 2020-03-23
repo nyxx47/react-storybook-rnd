@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Lottie from 'react-lottie';
 import * as SuccesLottiefile from '../../assets/lottiefiles/success.json';
 
-import Text from '../../components/texts/text.jsx';
-import View from '../../components/views';
-import Button from '../../components/buttons'
+import { Button, View, Text } from "../../components";
 
 const Success = () => {
     const defaultOptions = {

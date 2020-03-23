@@ -1,11 +1,8 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {close, isChecked} from '../../store/modules/payments/paymentConfirmation'
+import {close, isChecked} from '../../store/modules/payments/actions'
 
-import Flatlist from '../../components/flatlists'
-import Button from '../../components/buttons'
-import View from '../../components/views'
-import Text from '../../components/texts'
+import { Flatlist, Button, View, Text } from "../../components";
 import {Backpress} from '../../assets/icons'
 
 const Options = () => {

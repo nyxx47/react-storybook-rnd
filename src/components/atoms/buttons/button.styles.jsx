@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from '../particles/'
+import breakpoints from '../../particles'
 
 const isBackgroundColor = props => {
   if(!props.variant) return "#001CF9"

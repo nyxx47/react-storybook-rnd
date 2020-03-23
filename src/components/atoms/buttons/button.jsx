@@ -3,7 +3,7 @@ import { node, func, string } from 'prop-types'
 
 import StyledButton, { StyledLinkButton,SyledButtonIcon } from './button.styles.jsx'
 
-import { ArrowForward, Backpress } from "../../assets/icons";
+import { ArrowForward, Backpress } from "../../../assets/icons";
 
 
 const Icons = {

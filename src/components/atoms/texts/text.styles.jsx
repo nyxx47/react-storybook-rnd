@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from '../particles/'
+import breakpoints from '../../particles'
 
 const color = props => {
     if(!props.variant) return "#403e3e"
@@ -44,7 +44,7 @@ const weight = props => {
 }
 
 const StyledText = styled.p`
-    font-family: "Helvetica Neue";
+    font-family: 'Montserrat', sans-serif;
     font-weight: ${props => weight(props)};
     font-size: ${props => size(props)}px;
     text-align: ${props => !props.align ? 'left' : props.align};

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from '../particles/'
+import breakpoints from '../../particles'
 
 const StyledImage = styled.img`
     width: ${props => props.width};

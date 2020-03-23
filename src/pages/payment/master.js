@@ -1,13 +1,9 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {open} from '../../store/modules/payments/paymentConfirmation'
+import {open} from '../../store/modules/payments/actions'
 import Logo from '../../assets/images/logo.png'
 
-import Flatlist from '../../components/flatlists'
-import Button from '../../components/buttons'
-import View from '../../components/views'
-import Image from '../../components/images'
-import Text from '../../components/texts'
+import { Flatlist, Button, View, Image, Text } from "../../components";
 
 const Master = () => {
     const isChecked = useSelector(state => state.payments.isChecked)
