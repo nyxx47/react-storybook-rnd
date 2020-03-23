@@ -1,0 +1,36 @@
+import { Meta, Story,Props, Preview } from '@storybook/addon-docs/blocks';
+import Lottie from './lottie.jsx'
+import * as animationData from '../../../assets/lottiefiles/404.json'
+ 
+
+<Meta title="Atoms|Lotties" component={Lottie} />
+
+## Lottiefiles
+A Lottie is a JSON-based animation file format that enables designers to ship animations on any platform as easily as shipping static assets. They are small files that work on any device and can scale up or down without pixelation.
+https://lottiefiles.com/what-is-lottie
+
+<Preview withToolbar>
+    <Story name="lottie">
+        <Lottie width={200} height={200} autoplay={true} loop={true} path={animationData.default}/>
+    </Story>
+</Preview>
+
+<Props of={Lottie} />
+
+## USAGE
+
+Import your `lottie component` in your component file
+
+```jsx
+import { Lottie } from "../your_path/components";
+
+```
+
+Import `lottiefiles_name.json` as animation data and giving a name whatever you want!
+```jsx
+import * as animationData from 'your_path/assets/lottiefiles/404.json'
+```
+
+```jsx
+<Lottie width={500} height={500} autoplay={true} loop={true} path={animationData.default}/>
+```

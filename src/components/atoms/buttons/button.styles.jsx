@@ -86,7 +86,7 @@ export const StyledButton = styled.button`
     width: ${props => props.width};
     height: ${props => props.height};
     min-width: 120px;
-    border: 1px solid ${props => border(props)};
+    border:  ${props => !props.border ? 'none' : '1px solid '+border(props)};
     border-radius: 5px;
     background-color: ${props => isBackgroundColor(props)};
     cursor: ${props => isCursor(props)};
