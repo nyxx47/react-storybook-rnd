@@ -76,7 +76,7 @@ Button.propTypes = {
     href: string,
     target: string,
     onClick: func,
-    variant: 'primary' | 'secondary',
+    variant: string,
     rounded: string,
     
 }

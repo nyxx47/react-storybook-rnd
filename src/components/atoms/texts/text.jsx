@@ -21,12 +21,12 @@ const Text = ({children, variant, size, weight, align, isEqualSize, isEqualAlign
 }
 
 Text.propTypes = {
-    variant: 'primary'|'secondary',
-    size: '12px',
-    weight: 'light'|'regular'|'medium'|'semi-bold'|'bold',
+    variant: string,
+    size: string,
+    weight: string,
     align: string,
-    isEqualSize: 'represent in responsive mode',
-    isEqualAlign: 'represent in responsive mode'
+    isEqualSize: string,
+    isEqualAlign: string
 }
 
 export default Text

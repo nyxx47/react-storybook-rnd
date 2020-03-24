@@ -18,13 +18,13 @@ const Input = ({type, value, placeholder, onChange, width, height, bottom, ...pr
 }
 
 Input.propTypes = {
-    type: 'text'|'number',
+    type: string,
     value: string,
     placeholder: string,
     onChange: func,
     width: string,
     height: string,
-    bottom: '10px'
+    bottom: string
 }
 
 export default Input

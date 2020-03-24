@@ -20,8 +20,8 @@ const Container = ({children, isEqualWidth, isEqualHeight, flexDirection, backgr
 Container.propTypes = {
     children: node.isRequired,
     display: string,
-    flexDirection: 'column'|'column-reverse'|'row'|'row-reverse'|'inherit',
-    justifyContent: 'flex-start'|'flex-end'|'center',
+    flexDirection: string,
+    justifyContent: string,
     alignItems: string,
     isEqualWidth: string,
     isEqualHeight: string,

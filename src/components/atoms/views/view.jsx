@@ -53,20 +53,20 @@ View.propTypes = {
     style: any,
     width: string,
     height: string,
-    isEqualWidth: 'Width in responsive mode',
-    isEqualHeight: 'Height in responsive mode',
-    isEqualFlex: 'flex in responsive mode',
-    direction: 'column'|'column-reverse'|'row'|'row-reverse'|'inherit',
-    isEqualDirection: 'direction in responsive mode',
-    justify: 'flex-start'|'flex-end'|'center'|'space-between'|'space-around'|'space-evenly',
-    flexValue: '1'|'its represent flex: number; and its optional',
-    position: 'static'|'relative'|'absolute'|'fixed'|'sticky',
-    margin: '10px',
-    overflow: 'visible'|'hidden'|'scroll'|'auto'|'inherit',
+    isEqualWidth: string,
+    isEqualHeight: string,
+    isEqualFlex: string,
+    direction: string,
+    isEqualDirection: string,
+    justify: string,
+    flexValue: string,
+    position: string,
+    margin: string,
+    overflow: string,
     backgroundColor: string,
     isEqualBackground: string,
-    isBoxShadow: '10px 20px 50px rgba(149, 163, 180, 0.1)',
-    radius: '10px'
+    isBoxShadow: string,
+    radius: string
 }
 
 export default View

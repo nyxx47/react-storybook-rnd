@@ -48,11 +48,11 @@ Image.propTypes = {
     right: string,
     bottom: string,
     margin: string,
-    isEqualposition: 'represent in responsive mode',
-    isEqualtop: 'represent in responsive mode',
-    isEqualleft: 'represent in responsive mode',
-    isEqualright: 'represent in responsive mode',
-    isEqualbottom: 'represent in responsive mode',
+    isEqualposition: string,
+    isEqualtop: string,
+    isEqualleft: string,
+    isEqualright: string,
+    isEqualbottom: string,
     width: string,
     height: string
 }
