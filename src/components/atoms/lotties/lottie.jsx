@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import LottieFiles from 'react-lottie'
-import {object, bool, number, elementType} from 'prop-types'
+import {object, bool, number } from 'prop-types'
 
 const Lottie = ({width, height, loop, autoplay, path}) => {
 
@@ -8,16 +8,21 @@ const Lottie = ({width, height, loop, autoplay, path}) => {
         loop: loop,
         autoplay: autoplay, 
         animationData: path,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+          }
     }
 
 
-    return (
-        <LottieFiles 
-            width={width}
-            height={height}
-            options={lottieState}
-        />
-    )
+    return useMemo(() => {
+        return (
+            <LottieFiles 
+                width={width}
+                height={height}
+                options={lottieState}
+            />
+        )
+    })
 }
 
 Lottie.propTypes = {
