@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 const isDisplayProps = props => {
 
+    if(!props.display) return "flex"
+
     switch(props.display){
         case "flex":
             return "flex";
@@ -29,9 +31,6 @@ const flexDirection = props => {
             break;
         case "row-reverse":
             return "row-reverse";
-            break;
-        case "inherit":
-            return "initial";
             break;
         case "inherit":
             return "initial";

@@ -1,0 +1,34 @@
+import { withKnobs, text, select } from "@storybook/addon-knobs";
+import { Meta, Story,Props, Preview } from '@storybook/addon-docs/blocks';
+
+import View from './view.jsx'
+
+<Meta title="Node|View" component={View}/>
+
+## View
+View component is a sub wrapper of Container component
+
+<Preview withToolbar>
+    <Story name="View">
+        <View backgroundColor="pink" radius="10px" justify="center">
+            <p>Node</p>
+        </View>
+    </Story>
+</Preview>
+
+<Props of={View} />
+
+## USAGE
+
+Import your `View component` in your file
+
+```jsx
+import { View } from "../your_path/components";
+
+```
+
+```jsx
+<View>
+    <p>Node</p>
+</View>
+```

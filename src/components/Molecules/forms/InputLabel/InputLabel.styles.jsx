@@ -7,6 +7,8 @@ const StyledLabel = styled.label`
     text-align: left;
     color: #403e3e;
     margin-bottom:10px;
+    margin-bottom: ${props => props.labelBottom};
+    display: ${props => props.label}
 `
 
 export default StyledLabel

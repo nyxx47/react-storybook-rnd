@@ -3,6 +3,7 @@ import View from '../../atoms/views'
 
 import StyledFlatlist from './flatlist.styles.jsx'
 import Text from '../../atoms/texts'
+import { string } from 'prop-types'
 
 const Flatlist = ({title, subtitle}) => {
 
@@ -21,6 +22,11 @@ const Flatlist = ({title, subtitle}) => {
             </View>
         </StyledFlatlist>
     )
+}
+
+Flatlist.propTypes = {
+    title: string,
+    subtitle: string
 }
 
 export default Flatlist

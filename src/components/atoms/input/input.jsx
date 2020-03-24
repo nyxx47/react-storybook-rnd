@@ -1,5 +1,6 @@
 import React from "react";
 import StyledInput from './input.styles.jsx'
+import { func, string } from "prop-types";
 
 const Input = ({type, value, placeholder, onChange, width, height, bottom, ...props}) => {
 
@@ -14,6 +15,16 @@ const Input = ({type, value, placeholder, onChange, width, height, bottom, ...pr
             bottom={bottom}
             {...props}/>
     )
+}
+
+Input.propTypes = {
+    type: 'text'|'number',
+    value: string,
+    placeholder: string,
+    onChange: func,
+    width: string,
+    height: string,
+    bottom: '10px'
 }
 
 export default Input
