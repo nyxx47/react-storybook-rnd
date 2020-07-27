@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {open} from '../../store/modules/payments/actions'
 import Logo from '../../assets/images/logo.png'
 
 import { Flatlist, Button, View, Image, Text } from "../../components";
 import { navigate } from 'hookrouter';
-
-const Master = () => {
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useParams
+  } from "react-router-dom";
+const Master = ({props}) => {
     const isChecked = useSelector(state => state.payments.isChecked)
     const dispatch = useDispatch()
+    const {m,c,d,a} = useParams()
+    useEffect(() => {
+        console.log("Params ", m, c, d, a)
+    })
     
     return (
         <>
@@ -38,14 +48,14 @@ const Master = () => {
                 </Button>
             </View>
             <View width="100%" padding="20px" justify="space-between">
-                <Button isFocus width="45%" height="40px" variant="secondary" border="primary">
+                <Button isFocus width="45%" height="40px" variant="secondary" border="primary" >
                     Kembali
                 </Button>
-                <Button width="45%" height="40px" border="primary"
-                onClick={ () => navigate("/emoney")}
-                >
+                <Link to="/emoney">
+                <Button width="45%" height="40px" border="primary">
                     Lanjutkan
-                </Button>
+                </Button></Link>
+                
             </View>
             <View width="100%" padding="20px">
                 <Text size="14" weight="regular">28/02/2020 - 18:30:20</Text>

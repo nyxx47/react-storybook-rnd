@@ -6,7 +6,7 @@ import Error from './error';
 import Emoney from './emoney';
 
 const routes = {
-    "/": () => <App/>,
+    "/merchant/:m/code/:c/date/:d/amount/:a": ({m, c, d, a}) => <App data={{merchant: m, code: c, date: d, amount: a}}/>,
     "/emoney": () => <Emoney/>,
     "/success": () => <Success/>,
     "/error": () => <Error/>

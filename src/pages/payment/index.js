@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {useSelector} from 'react-redux'
 import Cards from '../../assets/images/cards.svg'
 
@@ -8,8 +8,12 @@ import Master from './master.js'
 import Options from './options.js'
 
 
-const App =  () => {
+const App = () => {
    const isStatus = useSelector( state => state.payments.isStatus)
+
+   useEffect(() => {
+      console.log("ENV ", process.env.REACT_APP_TITLE)
+   })
 
    return(
       <Container 

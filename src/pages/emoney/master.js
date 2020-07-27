@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/images/logo.png'
-
+import { navigate } from 'hookrouter';
 import { Button, View, Image, InputLabel } from "../../components";
-
-const Master = () => {
+import { withRouter } from 'react-router-dom';
+const Master = ({history}) => {
     const [user, setUser] = useState('');
     const [promo, setPromo] = useState('');
 
@@ -39,9 +39,11 @@ const Master = () => {
                 />
             </View>
             <View width="100%" padding="20px" justify="space-between">
-                <Button isFocus width="45%" height="40px" variant="secondary" border="primary">
-                    Kembali
-                </Button>
+              
+                    <Button isFocus width="45%" height="40px" variant="secondary" border="primary" onClick={() => history.goBack()}>
+                        Kembali
+                    </Button>
+            
                 <Button width="45%" height="40px" border="primary">
                     Lanjutkan
                 </Button>
@@ -50,4 +52,4 @@ const Master = () => {
      )
 }
 
-export default Master
+export default withRouter(Master)
