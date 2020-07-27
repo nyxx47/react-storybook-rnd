@@ -21,9 +21,9 @@ Inside deploy.js/pm2 file
 	    args: "run start:staging"
 	    },
 	    {
-		    name: "production",
-		    script: "npm",
-		    args: "run start:production"
+		name: "production",
+		script: "npm",
+		args: "run start:production"
 	    }
 	   ] 
      }
