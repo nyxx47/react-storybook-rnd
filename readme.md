@@ -55,4 +55,12 @@ npm run build:staging
 npm run build:prod
 ```
 
+Structure main params 
+```
+/merchant/:m/code/:c/date/:d/amount/:a
+```
 
+Main route is 
+```
+domain.com/merchant/aimoponic/code/1234/date/28-02-2020/amount/50000
+```
