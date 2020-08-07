@@ -5,10 +5,7 @@ import NotFound from './404'
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
+    Route
   } from "react-router-dom";
 
   import Payment from './payment';
@@ -19,7 +16,7 @@ import {
 const App = () => (
     <Router>
         <Switch>
-          <Route exact path="/merchant/:m/code/:c/date/:d/amount/:a" render={(props) => <Payment {...props} />} />
+          <Route exact path="/" render={(props) => <Payment {...props} />} />
           <Route path="/success">
             <Success />
           </Route>
@@ -34,3 +31,4 @@ const App = () => (
 )
 
 export default App
+
